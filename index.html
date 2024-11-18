@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅草寺观音签</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="top.js"></script>
+    <script src="script.js"></script>
+</head>
+<body data-state="home" data-lang="chs">
+    <div id="is-loading" style="display: none;"></div>
+
+    <div class="bg">
+        <div class="title">
+            <span class="image-fill-text">浅草寺観音箋</span>
+        </div>
+        <div class="hr">
+            <span></span>
+        </div>
+        <div class="content">
+            <div id="signTextContainer" class="sign-text" style="display: none;">
+                <div id="signText"></div>
+            </div>
+            <div id="cardContainer" class="card" style="display: none;"></div>
+            <div id="homeContainer">
+                <div id="box_omikuji_draw" class="non-hover_img">
+                    <!-- 阴影效果容器 -->
+                    <div class="box_omikuji_shadow"></div>
+                    <!-- 御神签图片容器 -->
+                    <div class="box_omikuji_inner">
+                        <img src="images/common/pic_omikuji.png" alt="おみくじ" class="pic_omikuji">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="btn-box">
+                <button id="decodeBtn" class="btn_m decorated-button">
+                    <span class="btn_inner">解读签文</span>
+                    <span class="corner-tr"></span>
+                    <span class="corner-bl"></span>
+                    <span class="corner-br"></span>
+                </button>
+            </div>
+            <div class="btn-box">
+                <button id="redrawBtn" class="btn_m decorated-button">
+                    <span class="btn_inner">重新抽签</span>
+                    <span class="corner-tr"></span>
+                    <span class="corner-bl"></span>
+                    <span class="corner-br"></span>
+                </button>
+            </div>
+            <div class="btn-box">
+                <button id="backBtn" class="btn_m decorated-button">
+                    <span class="btn_inner">返回签文</span>
+                    <span class="corner-tr"></span>
+                    <span class="corner-bl"></span>
+                    <span class="corner-br"></span>
+                </button>
+            </div>
+            <div class="btn-box">
+                <button id="shareBtn" class="btn_m decorated-button">
+                    <span class="btn_inner">分享结果</span>
+                    <span class="corner-tr"></span>
+                    <span class="corner-bl"></span>
+                    <span class="corner-br"></span>
+                </button>
+            </div>
+            <div class="home-buttons">
+                <div class="btn-box">
+                    <button id="drawDailyBtn" class="btn_m decorated-button">
+                        <span class="btn_inner">每日抽签</span>
+                        <span class="corner-tr"></span>
+                        <span class="corner-bl"></span>
+                        <span class="corner-br"></span>
+                    </button>
+                </div>
+                <div class="btn-box">
+                    <button id="manualPickBtn" class="btn_m decorated-button">
+                        <span class="btn_inner">手动选签</span>
+                        <span class="corner-tr"></span>
+                        <span class="corner-bl"></span>
+                        <span class="corner-br"></span>
+                        <select id="manualPicker" class="draw-manually">
+                            <option value="" disabled selected>请选择...</option>
+                        </select>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <script src="data.js"></script>
+</body>
+</html>
